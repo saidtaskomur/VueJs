@@ -1,0 +1,20 @@
+<div id="app">
+<p>{{hi()}} <a v-bind:href="link">Link</a> </p>
+</div>
+
+
+
+
+new Vue({
+	el:"#app",
+  data:{
+  	title :"Merhaba ",
+    message :"Said Taskomur",
+    link :"https://vuejs.org/v2/guide/"
+  },
+  methods : {
+  	hi : function(){
+    	return this.title + this.message
+    }
+  }
+})
