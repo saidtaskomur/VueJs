@@ -1,0 +1,17 @@
+<div id="app">
+  <p>{{hi()}}</p>
+</div>
+
+
+
+new Vue({
+	el:"#app",
+  data:{
+  	title :"Merhaba Dünya"
+  },
+  methods : {
+  	hi : function(){
+    	return "Merhaba Said TASKOMUR"
+    }
+  }
+})
