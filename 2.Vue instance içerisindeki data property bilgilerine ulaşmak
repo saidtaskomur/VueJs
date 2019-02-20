@@ -1,0 +1,19 @@
+<div id="app">
+  <p>{{hi()}}</p>
+</div>
+
+
+
+
+new Vue({
+	el:"#app",
+  data:{
+  	title :"Merhaba ",
+    message :"Said Taskomur"
+  },
+  methods : {
+  	hi : function(){
+    	return this.title + this.message
+    }
+  }
+})
