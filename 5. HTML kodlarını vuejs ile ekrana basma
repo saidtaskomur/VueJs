@@ -1,0 +1,26 @@
+<div id="app">
+<p v-once>{{title}}</p>
+<p>{{hi()}} <a v-bind:href="link">Link</a> </p>
+<p v-html="blogLink"></p>
+</div>
+
+
+
+
+
+new Vue({
+	el:"#app",
+  data:{
+  	title :"Merhaba Dünya ",
+    message :"Said Taskomur Hos Geldin",
+    link :"https://vuejs.org/v2/guide/",
+    blogLink : "<a href='https://vuejsegitim.com'>Blog Link</a>"
+    
+  },
+  methods : {
+  	hi : function(){
+    	this.title ="Merhaba !!! ";
+    	return this.title + this.message
+    }
+  }
+})
