@@ -1,0 +1,32 @@
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+
+  <p v-on:mousemove="updateCords($evet)">Cursor Cordinat : {{x}},{{y}}
+    <span v-on:mousemove.stop>Gizli Bölme</span>
+  </p>
+  
+</div>
+
+
+
+
+
+
+
+new Vue({
+	el:"#app",
+  data : {
+  	counter : 0,
+		x : 0,
+    y	: 0
+  },
+  methods: {
+  	updateCords : function(event){
+    	this.x = event.clientX;
+      this.y = event.clientY;
+    }
+    }
+})
