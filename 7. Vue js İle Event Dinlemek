@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <button v-on:click="showAlert">Buton</button>
+  <button v-on:click="counter++">HTML ARTTIR</button>
+  <button v-on:click="arttir">Vue Methods Arttir</button>
+
+
+  <p>{{counter}}</p>
+</div>
+
+
+
+
+/*-----------------------Script------------------------*/
+new Vue({
+	el:"#app",
+  data : {
+  	counter : 0
+  },
+  methods: {
+  	showAlert : function(){
+    	alert();
+    },
+    arttir : function (){
+    	this.counter++ ;
+    }
+  }
+})
