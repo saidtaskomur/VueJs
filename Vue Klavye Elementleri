@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <input type="text" v-on:keyup.enter.space="showAlert">
+  
+</div>
+
+
+
+
+
+
+
+new Vue({
+	el:"#app",
+  data : {
+
+  },
+  methods: {
+        showAlert : function(event){
+        	alert(event.target.value);
+        }
+    }
+})
