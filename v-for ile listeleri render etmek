@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+  <ul>
+    <li v-for="product in products">{{product}}</li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+new Vue ({
+   el:"#app",
+   data : {
+   	products : ["Monitör","Klavye","Askı","Masa"],
+    persons : [
+    	{name :"Said" ,email:"saidtaskomur@gmail.com"},
+      {name :"Aysenur",email:"odabasiayse@gmail.com"},
+      {name :"Ramazan",email:"rtaskomur@gmail.com"},
+      {name :"nesibe",email:"taskomurnesibetaskomur@gmail.com"}
+      
+    ]
+   }
+})
+
