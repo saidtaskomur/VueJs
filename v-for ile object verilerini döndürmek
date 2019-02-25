@@ -1,0 +1,26 @@
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+  <ul>
+    <li v-for="(personel in persons">
+      <ul>
+        <li v-for="(item,key,index) in personel">{{key}}{{item}}{{ index}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+new Vue ({
+   el:"#app",
+   data : {
+    persons : [
+    	{name :"Said" ,email:"saidtaskomur@gmail.com"},
+      {name :"Aysenur",email:"odabasiayse@gmail.com"},
+      {name :"Ramazan",email:"rtaskomur@gmail.com"},
+      {name :"nesibe",email:"taskomurnesibetaskomur@gmail.com"}
+      
+    ]
+   }
+})
