@@ -1,0 +1,50 @@
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <button v-on:click="counter++">Arttır</button>
+    <button v-on:click="counter--">Azalt</button>
+    <button v-on:click="Secondcounter++">Secondcounter Arttir</button>
+
+    <p>counter : {{counter}} || Secondcounter : {{Secondcounter}}</p>
+    
+
+    <p>{{ result() }} {{ output }}</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+new Vue({
+	el:"#app",
+  data : {
+  	counter : 0 ,
+    Secondcounter : 0
+  },
+  methods : {
+  	result : function(){
+    			
+          return this.counter >= 10 ? "10 Dan Büyüktür" : "10 Dan Küçüktür";
+    }
+  },
+  computed : {
+  	output : function(){
+    	console.log("Computed Calisti");
+    	return this.counter >= 10 ? "10 Dan Büyüktür" : "10 Dan Küçüktür";
+    }
+  },
+  watch : {
+  	counter : function(value){
+    	vm=this;
+    	setTimeout(function(){
+      	vm.counter = 0 ;
+      },1500)
+    }
+  }
+})
