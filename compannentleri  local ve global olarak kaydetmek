@@ -1,0 +1,46 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+
+<div id=app>
+  <my-comp></my-comp>
+</div>
+<hr>
+<div id=app2>
+  <my-comp></my-comp>
+</div>
+
+
+
+
+
+
+
+
+
+
+var cmp = {
+data: function() {
+  return {
+    status: "pasif"
+  }
+},
+template: '<p>Sunucu Dururumu : {{status}} (<button @click="changeStatus">Degistir</button>)</p>',
+methods: {
+  changeStatus: function() {
+
+    this.status = "Aktif"
+  }
+}
+};
+
+new Vue({
+  el: "#app",
+  components: {
+    "my-comp": cmp
+  }
+});
+new Vue({
+  el: "#app2",
+  components: {
+
+  }
+});
